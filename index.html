@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Planilha de Controle Financeiro</h1>
+    <div class="container">
+        <label for="salario">Salário: </label>
+        <input type="number" id="salario" placeholder="Digite seu salário" oninput="calcularSaldo()">
+
+        <table id="tabela-gastos">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Importante</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas serão adicionadas aqui dinamicamente -->
+            </tbody>
+        </table>
+
+        <button onclick="adicionarGasto()">Adicionar Gasto</button>
+
+        <div id="saldo">
+            <h2>Saldo Atual: <span id="saldo-atual">0</span></h2>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
